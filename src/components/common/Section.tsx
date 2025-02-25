@@ -11,7 +11,7 @@ function Section({ className, title, children }: SectionProps) {
   return (
     <section className={mergeClassNames("my-8", className)}>
       {title && (
-        <Header3 className="flex items-center mb-4 text-primary after:content-[' '] after:ml-6 after:border-t-[1px] after:border-gray-300 after:flex-1">
+        <Header3 className="flex items-center mb-6 text-primary after:content-[' '] after:ml-6 after:border-t-[1px] after:border-gray-300 after:flex-1">
           {title}
         </Header3>
       )}
