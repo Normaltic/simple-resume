@@ -1,3 +1,4 @@
+import { mergeClassNames } from "@/utils/mergeClassNames";
 import Image from "next/image";
 
 export interface IconLinkProps {
@@ -9,9 +10,7 @@ export interface IconLinkProps {
 
 function IconLink({ className, iconUrl, link, text }: IconLinkProps) {
   return (
-    <div
-      className={`flex items-center gap-4 ${className ? ` ${className}` : ""}`}
-    >
+    <div className={mergeClassNames("flex items-center gap-4", className)}>
       <Image src={iconUrl} width={15} height={15} alt="Icon" />
       <a className="text-primary" target="_blank" href={link}>
         {text ?? link}

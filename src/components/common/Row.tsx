@@ -1,3 +1,5 @@
+import { mergeClassNames } from "@/utils/mergeClassNames";
+
 export interface RowProps {
   className?: string;
   first: React.ReactNode;
@@ -6,7 +8,7 @@ export interface RowProps {
 
 function Row({ className, first, last }: RowProps) {
   return (
-    <div className={`flex gap-10${className ? ` ${className}` : ""}`}>
+    <div className={mergeClassNames("flex gap-10", className)}>
       <div className="w-60 flex justify-end">{first}</div>
       <div className="flex-1">{last}</div>
     </div>
