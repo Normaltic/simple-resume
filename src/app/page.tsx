@@ -1,9 +1,9 @@
-import Row from "@/components/common/Row";
+import Profile from "@/components/profile/Profile";
 
 export default function Home() {
   return (
     <div>
-      <Row first={<div>asd</div>} last={<div>asd</div>} />
+      <Profile />
     </div>
   );
 }
