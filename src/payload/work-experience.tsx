@@ -24,6 +24,13 @@ const SKETCHSOFT_ENGINEER_1: PositionExpeirence = {
 
 const SKETCHSOFT_ENGINEER_2: PositionExpeirence = {
   title: "3D Sketchbook Feather",
+  techStack: [
+    "react",
+    "typescript",
+    "zustand",
+    "three.js",
+    "styled-components"
+  ],
   contents: [
     { bold: true, value: "어플리케이션 진입 시 마지막 상태 복원 과정 최적화" },
     [
@@ -108,6 +115,7 @@ const BASETRADE_TEAM_LEAD: PositionExpeirence = {
 
 const BASETRADE_DEVELOPER_1: PositionExpeirence = {
   title: "투자 조합 관리 플랫폼 RedFi",
+  techStack: ["react", "typescript", "recoil", "styled-components"],
   contents: [
     { bold: true, value: "HTML 기반 PDF 전자 서명 시스템 프론트엔드 개발" },
     [
@@ -133,6 +141,7 @@ const BASETRADE_DEVELOPER_1: PositionExpeirence = {
 
 const BASETRADE_DEVELOPER_2: PositionExpeirence = {
   title: "암호화폐 거래소",
+  techStack: ["react", "redux", "redux-saga", "sass", "styled-components"],
   contents: [
     { bold: true, value: "레거시 코드 리팩토링 및 성능 최적화" },
     [

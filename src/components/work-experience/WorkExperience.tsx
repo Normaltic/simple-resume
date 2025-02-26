@@ -7,6 +7,7 @@ import UnorderedList, {
   UnorderedListProps
 } from "@/components/common/UnorderedList";
 import { displayPeriod } from "@/utils/formatDate";
+import TechBadge from "./TechBadge";
 
 interface PositionExpeirence {
   position: string;
@@ -14,6 +15,7 @@ interface PositionExpeirence {
   end?: Date;
   experience: Array<{
     title: string;
+    techStack?: string[];
     contents: UnorderedListProps["items"];
   }>;
 }
@@ -49,11 +51,20 @@ function WorkExperience({ careers }: WorkExperienceProps) {
               }
               last={
                 <>
-                  {experience.map(({ title, contents }) => (
+                  {experience.map(({ title, techStack, contents }) => (
                     <>
                       <Header4 className="[&:nth-child(n+2)]:mt-8">
                         {title}
                       </Header4>
+                      {techStack && (
+                        <div>
+                          {techStack.map((tech) => (
+                            <TechBadge className="mr-1" key={tech}>
+                              {tech}
+                            </TechBadge>
+                          ))}
+                        </div>
+                      )}
                       <UnorderedList items={contents} />
                     </>
                   ))}
