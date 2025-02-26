@@ -8,7 +8,7 @@ import UnorderedList, {
 } from "@/components/common/UnorderedList";
 import Position, { PositionProps } from "./Position";
 
-interface CareerExpeirence extends Omit<PositionProps, "className"> {
+interface PositionExpeirence extends Omit<PositionProps, "className"> {
   experience: Array<{
     title: string;
     contents: UnorderedListProps["items"];
@@ -18,7 +18,7 @@ interface CareerExpeirence extends Omit<PositionProps, "className"> {
 export interface CareerPayload {
   name: string;
   description?: string;
-  experiences: CareerExpeirence[];
+  experiences: PositionExpeirence[];
 }
 
 export interface WorkExperienceProps {

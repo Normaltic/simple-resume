@@ -1,9 +1,9 @@
 import type { IntroducePayload } from "@/components/introduce/Introduce";
 
 const payload: IntroducePayload[] = [
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium sequi cumque quo, hic beatae dolorem? Nemo, illo non, expedita eligendi accusantium velit quaerat ut ab, sequi reprehenderit aliquam sed.",
-  "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, nemo quis suscipit blanditiis hic soluta culpa, deleniti odio doloribus laudantium itaque adipisci perferendis quisquam iure numquam? Necessitatibus similique quam hic. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores laborum cumque itaque nesciunt necessitatibus quod dolor deleniti, ad quia, odio earum sed illo explicabo magnam ducimus eum ex id maiores.",
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. In quod velit atque ipsum saepe assumenda. A distinctio autem animi in, repellat quae placeat molestias consequatur perspiciatis cumque corrupti neque culpa."
+  "5년 차 프론트엔드 개발자로, React와 Typescript를 기반으로 웹 서비스를 개발해 왔습니다. 직관적인 인터페이스와 사용자 경험에 집중한 서비스 개발을 추구합니다. 또한, 개발자 경험을 고려한 코드 작성과 확장 가능한 아키텍처에 대해 끊임없이 고민하고 있습니다. 지속적인 성장을 위해 노력하고 있으며, 최근에는 Next.js와 TailwindCSS를 학습하고 있습니다. 개발 활동에 기여하는 것에 흥미가 있어, 오픈 소스 라이브러리 ‘react-daum-postcode’의 메인테이너로 활동하고 있습니다.",
+  "서비스는 함께 만드는 것으로, 좋은 서비스 개발은 원활한 커뮤니케이션이 중요하다고 생각합니다. 더 나은 결과를 만들어가는 과정이라 여겨 문제 해결과 개발을 위해 적극적인 소통을 지향합니다. 이와 함께, 서로가 목표에 집중하며 효율적으로 협업하고 함께 성장할 수 있는 환경을 조성하는 것에 관심이 있습니다. 작은 팀의 리드를 맡게 되어 팀의 성장과 효율적인 협업 방법을 고민하며 개발 문화를 조성한 경험이 있습니다. 스크럼을 도입하고 스프린트를 진행하여 개발 프로세스를 개선하고 체계적인 협업 구조를 만들기도 하였습니다.",
+  "‘의미 없는 코드는 없다’는 마음가짐으로 코드를 작성하려 하고, 작성한 코드가 사용자에게 가치를 제공할 때 큰 보람을 느낍니다. 이를 바탕으로 더 좋은 개발자로 성장하여 더 많은 가치를 전달할 수 있도록 계속해서 경험하고 노력하고 있습니다."
 ];
 
 export default payload;
