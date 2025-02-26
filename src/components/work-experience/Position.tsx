@@ -2,7 +2,7 @@ export interface PositionProps {
   className?: string;
   position: string;
   start: Date;
-  end: Date;
+  end?: Date;
 }
 
 function Position({ className, position, start, end }: PositionProps) {
@@ -12,7 +12,7 @@ function Position({ className, position, start, end }: PositionProps) {
       <div>
         {start.getFullYear()}.{start.getMonth() + 1}
         {" ~ "}
-        {end.getFullYear()}.{end.getMonth() + 1}
+        {end ? `${end.getFullYear()}.${end.getMonth() + 1}` : "Now"}
       </div>
     </div>
   );
