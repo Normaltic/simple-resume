@@ -9,7 +9,7 @@ export interface RowProps {
 function Row({ className, first, last }: RowProps) {
   return (
     <div className={mergeClassNames("flex gap-10", className)}>
-      <div className="w-60 flex justify-end">{first}</div>
+      <div className="w-60 flex flex-col items-end">{first}</div>
       <div className="flex-1">{last}</div>
     </div>
   );

@@ -3,6 +3,7 @@ import Introduce from "@/components/introduce/Introduce";
 import Skill from "@/components/skill/Skill";
 import WorkExperience from "@/components/work-experience/WorkExperience";
 import OtherExperience from "@/components/other-experience/OtherExperience";
+import Education from "@/components/education/Education";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Skill />
       <WorkExperience />
       <OtherExperience />
+      <Education />
     </>
   );
 }
