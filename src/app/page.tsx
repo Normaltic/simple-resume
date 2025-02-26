@@ -6,16 +6,24 @@ import OtherExperience from "@/components/other-experience/OtherExperience";
 import Education from "@/components/education/Education";
 import Etc from "@/components/etc/Etc";
 
+import profilePayload from "@/payload/profile";
+import introducePayload from "@/payload/introduce";
+import skillPayload from "@/payload/skill";
+import workExperiencePayload from "@/payload/work-experience";
+import otherExperiencePayload from "@/payload/other-experience";
+import educationPayload from "@/payload/education";
+import etcPayload from "@/payload/etc";
+
 export default function Home() {
   return (
     <>
-      <Profile />
-      <Introduce />
-      <Skill />
-      <WorkExperience />
-      <OtherExperience />
-      <Education />
-      <Etc />
+      <Profile info={profilePayload} />
+      <Introduce introduces={introducePayload} />
+      <Skill list={skillPayload} />
+      <WorkExperience careers={workExperiencePayload} />
+      <OtherExperience experiences={otherExperiencePayload} />
+      <Education educations={educationPayload} />
+      <Etc etcs={etcPayload} />
     </>
   );
 }

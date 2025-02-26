@@ -1,30 +1,18 @@
 import Section from "@/components/common/Section";
 import Paragraph from "@/components/common/Paragraph";
 
-function Introduce() {
+export type IntroducePayload = string;
+
+export interface IntroduceProps {
+  introduces: IntroducePayload[];
+}
+
+function Introduce({ introduces }: IntroduceProps) {
   return (
     <Section title="Introduce" className="[&>p]:mb-4">
-      <Paragraph>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quidem
-        amet labore vel veritatis delectus reprehenderit nulla blanditiis neque
-        ipsum, velit atque ipsam natus tempora officia facilis qui.
-        Consequuntur, doloribus.
-      </Paragraph>
-      <Paragraph>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quidem
-        amet labore vel veritatis delectus reprehenderit nulla blanditiis neque
-        ipsum, velit atque ipsam natus tempora officia facilis qui.
-        Consequuntur, doloribus. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Dolorum quidem amet labore vel veritatis delectus
-        reprehenderit nulla blanditiis neque ipsum, velit atque ipsam natus
-        tempora officia facilis qui. Consequuntur, doloribus.
-      </Paragraph>
-      <Paragraph>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quidem
-        amet labore vel veritatis delectus reprehenderit nulla blanditiis neque
-        ipsum, velit atque ipsam natus tempora officia facilis qui.
-        Consequuntur, doloribus.
-      </Paragraph>
+      {introduces.map((item) => (
+        <Paragraph key={item?.toString()}>{item}</Paragraph>
+      ))}
     </Section>
   );
 }

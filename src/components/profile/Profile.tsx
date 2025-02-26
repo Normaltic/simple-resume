@@ -4,7 +4,21 @@ import Header3 from "@/components/common/Header3";
 
 import IconLink from "./IconLink";
 
-function Profile() {
+export interface ProfilePayload {
+  name: string;
+  profileImage: string;
+  contacts: Array<{
+    iconUrl: string;
+    link: string;
+    text: string;
+  }>;
+}
+
+export interface ProfileProps {
+  info: ProfilePayload;
+}
+
+function Profile({ info }: ProfileProps) {
   return (
     <Section>
       <Row
@@ -12,23 +26,16 @@ function Profile() {
         first={
           <img
             className="bg-gray-500 max-w-[12rem]"
-            src="/images/Profile.png"
+            src={info.profileImage}
             alt="Profile Image"
           />
         }
         last={
           <>
-            <Header3 className="mb-12">김윤지 ( Yunji Kim )</Header3>
-            <IconLink
-              iconUrl="/svgs/github.svg"
-              link="https://github.com/Normaltic"
-              text="Normaltic"
-            />
-            <IconLink
-              iconUrl="/svgs/envelope.svg"
-              link="mailto:normaltic@gmail.com"
-              text="normaltic@gmail.com"
-            />
+            <Header3 className="mb-12">{info.name}</Header3>
+            {info.contacts.map(({ iconUrl, link, text }) => (
+              <IconLink key={text} iconUrl={iconUrl} link={link} text={text} />
+            ))}
           </>
         }
       />

@@ -1,21 +1,25 @@
 import Section from "@/components/common/Section";
 import Header4 from "../common/Header4";
-import UnorderedList from "../common/UnorderedList";
+import UnorderedList, { UnorderedListProps } from "../common/UnorderedList";
 
-function Skill() {
+export interface SkillPayload {
+  category: string;
+  list: UnorderedListProps["items"];
+}
+
+export interface SkillProps {
+  list: SkillPayload[];
+}
+
+function Skill({ list }: SkillProps) {
   return (
     <Section title="Skill">
-      <Header4 className="mb-2">Frontend</Header4>
-      <UnorderedList
-        items={[
-          "React, Redux, Zustand, (Next.js)",
-          "Styled-components, SCSS, (Tailwind.css)"
-        ]}
-      />
-      <Header4 className="mb-2">Backend</Header4>
-      <UnorderedList items={["Express.js, (MongoDB)"]} />
-      <Header4 className="mb-2">Build & Deploy</Header4>
-      <UnorderedList items={["Webpack, Rollup, AWS Amplify, EC2, (esbuild)"]} />
+      {list.map(({ category, list }) => (
+        <>
+          <Header4 className="mb-2">{category}</Header4>
+          <UnorderedList items={list} />
+        </>
+      ))}
     </Section>
   );
 }
