@@ -5,6 +5,7 @@ import UnorderedList, {
   UnorderedListProps
 } from "@/components/common/UnorderedList";
 import { displayPeriod } from "@/utils/formatDate";
+import Header4 from "../common/Header4";
 
 export interface EducationPayload {
   name: string;
@@ -28,15 +29,18 @@ function Education({ educations }: EducationProps) {
       {educations.map(
         ({ name, department, start, end, degree, activities }) => (
           <Row
+            className="max-sm:block max-sm:first:*:w-[initial] max-sm:first:*:mb-4"
             key={name}
             first={
               <>
-                <div>{name}</div>
-                {department && <div>{department}</div>}
-                <div>
-                  <div>{displayPeriod(start, end)}</div>
+                <div className="max-sm:flex max-sm:gap-1">
+                  <Header4>{name}</Header4>
+                  {department && <Header4>{department}</Header4>}
                 </div>
-                {degree && <div>{degree}</div>}
+                <div className="text-gray-500 italic">
+                  <div>{displayPeriod(start, end)}</div>
+                  {degree && <div>{degree}</div>}
+                </div>
               </>
             }
             last={activities.map(({ title, descriptions }) => (

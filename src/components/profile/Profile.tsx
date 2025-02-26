@@ -21,7 +21,7 @@ function Profile({ info }: ProfileProps) {
   return (
     <Section>
       <Row
-        className="first:*:justify-center last:*:flex last:*:flex-col last:*:justify-center last:*:py-4 last:*:gap-2"
+        className="max-sm:flex-col max-sm:items-center"
         first={
           <img
             className="bg-gray-500 max-w-[12rem]"
@@ -30,12 +30,12 @@ function Profile({ info }: ProfileProps) {
           />
         }
         last={
-          <>
+          <div className="h-[100%] flex flex-col justify-center gap-2">
             <h1 className="text-4xl mb-12">{info.name}</h1>
             {info.contacts.map(({ iconUrl, link, text }) => (
               <IconLink key={text} iconUrl={iconUrl} link={link} text={text} />
             ))}
-          </>
+          </div>
         }
       />
     </Section>

@@ -1,4 +1,4 @@
-export function formatDate(date: Date, format = "YY.MM") {
+export function formatDate(date: Date, format = "YYYY.MM") {
   function appendZero(str: string) {
     return str.length === 1 ? `0${str}` : str;
   }
@@ -35,7 +35,7 @@ export function displayPeriod(
     onGoingText?: string;
   }
 ) {
-  const dateFormat = options?.dateFormat ?? "YY.MM";
+  const dateFormat = options?.dateFormat ?? "YYYY.MM";
   const separator = options?.separator ?? " ~ ";
   const onGoingText = options?.onGoingText ?? "Now";
 

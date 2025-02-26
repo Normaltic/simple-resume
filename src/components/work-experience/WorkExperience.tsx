@@ -6,9 +6,12 @@ import Row from "@/components/common/Row";
 import UnorderedList, {
   UnorderedListProps
 } from "@/components/common/UnorderedList";
-import Position, { PositionProps } from "./Position";
+import { displayPeriod } from "@/utils/formatDate";
 
-interface PositionExpeirence extends Omit<PositionProps, "className"> {
+interface PositionExpeirence {
+  position: string;
+  start: Date;
+  end?: Date;
   experience: Array<{
     title: string;
     contents: UnorderedListProps["items"];
@@ -34,15 +37,15 @@ function WorkExperience({ careers }: WorkExperienceProps) {
           {description && <Paragraph className="mb-8">{description}</Paragraph>}
           {experiences.map(({ position, start, end, experience }) => (
             <Row
-              className={"[&:nth-last-child(n+2)]:mb-8"}
+              className={
+                "[&:nth-last-child(n+2)]:mb-8 max-sm:flex-col max-sm:gap-4 max-sm:first:*:w-[initial]"
+              }
               key={`${position}-${start.toString()}`}
               first={
-                <Position
-                  className="text-right"
-                  position={position}
-                  start={start}
-                  end={end}
-                />
+                <div className="text-gray-500 text-xl italic max-sm:flex max-sm:flex-col-reverse">
+                  <div>{position}</div>
+                  <div>{displayPeriod(start, end)}</div>
+                </div>
               }
               last={
                 <>
