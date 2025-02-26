@@ -1,6 +1,8 @@
 import Section from "@/components/common/Section";
-import Header5 from "../common/Header5";
-import UnorderedList, { UnorderedListProps } from "../common/UnorderedList";
+import Header5 from "@/components/common/Header5";
+import UnorderedList, {
+  UnorderedListProps
+} from "@/components/common/UnorderedList";
 
 export interface EtcPayload {
   title: string;

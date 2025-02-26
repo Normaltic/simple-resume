@@ -15,9 +15,9 @@ function UnorderedList({ items, className, ...props }: UnorderedListProps) {
   return (
     <ul
       className={mergeClassNames(
-        "list-outside list-disc pl-7 leading-6",
-        "[&>li:nth-child(n+1)]:mt-1",
-        "[&_ul]:list-[revert] [&_ul]:pl-6 mb-4",
+        "list-outside list-disc pl-7",
+        "[&>li]:mt-1",
+        "[&_ul]:list-[revert] [&_ul]:pl-6 mb-2",
         className
       )}
       {...props}

@@ -24,7 +24,7 @@ const payload: EducationPayload[] = [
           "저학년 강의 보조 및 진로 고민 상담 등 멘토 활동"
         ]
       },
-      { title: "교내 작품 전시회 출품 및 교내외 개발 대회 참가" },
+      { title: "교내 작품 전시회 출품 및 교내외 대회 참가" },
       {
         title: "국내 학술지 투고",
         descriptions: [

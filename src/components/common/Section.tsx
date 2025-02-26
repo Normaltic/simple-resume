@@ -1,5 +1,4 @@
 import { mergeClassNames } from "@/utils/mergeClassNames";
-import Header3 from "./Header3";
 
 export interface SectionProps {
   className?: string;
@@ -9,11 +8,11 @@ export interface SectionProps {
 
 function Section({ className, title, children }: SectionProps) {
   return (
-    <section className={mergeClassNames("my-8", className)}>
+    <section className={mergeClassNames("my-16", className)}>
       {title && (
-        <Header3 className="flex items-center mb-6 text-primary after:content-[' '] after:ml-6 after:border-t-[1px] after:border-gray-300 after:flex-1">
+        <h2 className="text-3xl flex items-center mb-8 text-primary after:content-[' '] after:ml-6 after:border-t-[1px] after:border-gray-300 after:flex-1">
           {title}
-        </Header3>
+        </h2>
       )}
       {children}
     </section>

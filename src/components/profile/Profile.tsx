@@ -1,6 +1,5 @@
 import Section from "@/components/common/Section";
 import Row from "@/components/common/Row";
-import Header3 from "@/components/common/Header3";
 
 import IconLink from "./IconLink";
 
@@ -32,7 +31,7 @@ function Profile({ info }: ProfileProps) {
         }
         last={
           <>
-            <Header3 className="mb-12">{info.name}</Header3>
+            <h1 className="text-4xl mb-12">{info.name}</h1>
             {info.contacts.map(({ iconUrl, link, text }) => (
               <IconLink key={text} iconUrl={iconUrl} link={link} text={text} />
             ))}

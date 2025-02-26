@@ -43,7 +43,7 @@ function Education({ educations }: EducationProps) {
             }
             last={activities.map(({ title, descriptions }) => (
               <>
-                <Header5>{title}</Header5>
+                <Header5 className="[&:nth-child(n+2)]:mt-4">{title}</Header5>
                 {descriptions && <UnorderedList items={descriptions} />}
               </>
             ))}

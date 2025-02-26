@@ -1,6 +1,8 @@
 import Section from "@/components/common/Section";
-import Header4 from "../common/Header4";
-import UnorderedList, { UnorderedListProps } from "../common/UnorderedList";
+import Header4 from "@/components/common/Header4";
+import UnorderedList, {
+  UnorderedListProps
+} from "@/components/common/UnorderedList";
 
 export interface SkillPayload {
   category: string;
@@ -17,7 +19,10 @@ function Skill({ list }: SkillProps) {
       {list.map(({ category, list }) => (
         <>
           <Header4 className="mb-2">{category}</Header4>
-          <UnorderedList items={list} />
+          <UnorderedList
+            className="[&:nth-last-child(n+2)]:mb-4"
+            items={list}
+          />
         </>
       ))}
     </Section>
