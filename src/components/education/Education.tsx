@@ -4,6 +4,7 @@ import Header5 from "@/components/common/Header5";
 import UnorderedList, {
   UnorderedListProps
 } from "@/components/common/UnorderedList";
+import { displayPeriod } from "@/utils/formatDate";
 
 export interface EducationPayload {
   name: string;
@@ -33,10 +34,7 @@ function Education({ educations }: EducationProps) {
                 <div>{name}</div>
                 {department && <div>{department}</div>}
                 <div>
-                  {" "}
-                  {start.getFullYear()}.{start.getMonth() + 1}
-                  {" ~ "}
-                  {end ? `${end.getFullYear()}.${end.getMonth() + 1}` : "Now"}
+                  <div>{displayPeriod(start, end)}</div>
                 </div>
                 {degree && <div>{degree}</div>}
               </>
