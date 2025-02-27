@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 
 const payload: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_URL ?? "http://localhost:3000"),
   title: "Resume: Yunji Kim",
-  description: "This is Frontend developer Yunji Kim's resume",
+  description: "Frontend developer Yunji Kim's resume",
   openGraph: {
     title: "Resume: Yunji Kim",
-    description: "This is Frontend developer Yunji Kim's resume",
+    description: "Frontend developer Yunji Kim's resume",
     images: [
       {
-        url: "/images/Profile.png",
-        width: 800,
-        height: 600,
+        url: "/images/Thumbnail.png",
+        width: 600,
+        height: 300,
         alt: "Page preview image"
       }
     ],
