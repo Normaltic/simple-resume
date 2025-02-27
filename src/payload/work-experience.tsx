@@ -84,6 +84,8 @@ const SKETCHSOFT_EXPERIENCES: Experience = {
 
 const SKETCHSOFT_PAYLOAD: CareerPayload = {
   name: "Sketchsoft",
+  start: new Date("2021-10"),
+  end: new Date("2024-06"),
   description:
     "‘어떤 상상도 바로 그릴 수 있게’를 추구하며 3차원 스케치북 서비스 ‘Feather’를 개발하는 스타트업입니다. 엔지니어로 합류하여 주로 서비스의 프론트엔드를 개발하였고, 상황에 따라 백엔드 개발도 진행했습니다. 팀 내부에서 일정 관리에 대한 필요성이 생겨, 스크럼을 도입하고 스프린트를 진행하며 제품 개발에 대한 프로세스를 정립하였습니다.",
   experiences: [SKETCHSOFT_EXPERIENCES]
@@ -174,6 +176,8 @@ const BASETRADE_EXPERIENCES_2: Experience = {
 
 const BASETRADE_PAYLOAD: CareerPayload = {
   name: "베이스트레이드",
+  start: new Date("2019-10"),
+  end: new Date("2021-10"),
   description:
     "블록체인 관련 기술을 보유한 스타트업으로, 프론트엔드 개발자로 합류하였습니다. 초기에는 사내에서 개발 중이던 거래소의 신규 기능 개발과 유지보수를 진행하였습니다. 이후 회사의 방향성에 의해 투자 조합 관리 플랫폼을 개발하였습니다. 합류하고 얼마 지나지 않아 프론트엔드 개발자가 혼자가 되었으나, 팀원이 생기며 작은 규모의 팀 리드를 맡게 되었습니다.",
   experiences: [BASETRADE_EXPERIENCES_1, BASETRADE_EXPERIENCES_2]
