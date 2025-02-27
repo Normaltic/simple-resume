@@ -4,7 +4,7 @@ import Header5 from "@/components/common/Header5";
 import UnorderedList, {
   UnorderedListProps
 } from "@/components/common/UnorderedList";
-import { displayPeriod } from "@/utils/formatDate";
+import { displayPeriod } from "@/utils/date";
 import Header4 from "../common/Header4";
 
 export interface EducationPayload {

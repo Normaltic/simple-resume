@@ -6,7 +6,7 @@ import Row from "@/components/common/Row";
 import UnorderedList, {
   UnorderedListProps
 } from "@/components/common/UnorderedList";
-import { displayPeriod } from "@/utils/formatDate";
+import { dateDiff, displayPeriod } from "@/utils/date";
 import TechBadge from "./TechBadge";
 
 interface PositionExpeirence {
@@ -22,6 +22,8 @@ interface PositionExpeirence {
 
 export interface CareerPayload {
   name: string;
+  start: Date;
+  end?: Date;
   description?: string;
   experiences: PositionExpeirence[];
 }
@@ -33,9 +35,12 @@ export interface WorkExperienceProps {
 function WorkExperience({ careers }: WorkExperienceProps) {
   return (
     <Section title="Work Experience">
-      {careers.map(({ name, description, experiences }) => (
+      {careers.map(({ name, start, end, description, experiences }) => (
         <article className="[&:nth-last-child(n+2)]:mb-12" key={name}>
-          <Header3 className="mb-4">{name}</Header3>
+          <Header3 className="">{name}</Header3>
+          <i className="block text-xl mb-4 text-gray-500">
+            {displayPeriod(start, end)} ({dateDiff(start, end ?? new Date())})
+          </i>
           {description && <Paragraph className="mb-8">{description}</Paragraph>}
           {experiences.map(({ position, start, end, experience }) => (
             <Row
@@ -44,7 +49,7 @@ function WorkExperience({ careers }: WorkExperienceProps) {
               }
               key={`${position}-${start.toString()}`}
               first={
-                <div className="text-gray-500 text-xl italic max-sm:flex max-sm:flex-col-reverse">
+                <div className="sticky top-4 text-gray-500 text-xl italic max-sm:flex max-sm:flex-col-reverse">
                   <div>{position}</div>
                   <div>{displayPeriod(start, end)}</div>
                 </div>

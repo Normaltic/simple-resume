@@ -44,3 +44,14 @@ export function displayPeriod(
 
   return `${startDate}${separator}${endDate}`;
 }
+
+export function dateDiff(from: Date, to: Date) {
+  const diffYear = to.getFullYear() - from.getFullYear();
+  const diffMonth = to.getMonth() - from.getMonth();
+
+  const parsedMonth = diffYear * 12 + diffMonth + 1;
+  const targetYear = Math.floor(parsedMonth / 12);
+  const targetMonth = parsedMonth % 12;
+
+  return (targetYear ? `${targetYear}년 ` : "") + `${targetMonth}개월`;
+}
