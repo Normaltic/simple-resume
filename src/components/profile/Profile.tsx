@@ -1,16 +1,12 @@
 import Section from "@/components/common/Section";
 import Row from "@/components/common/Row";
 
-import IconLink from "./IconLink";
+import IconLink, { IconLinkProps } from "./IconLink";
 
 export interface ProfilePayload {
   name: string;
   profileImage: string;
-  contacts: Array<{
-    iconUrl: string;
-    link: string;
-    text: string;
-  }>;
+  contacts: Array<Omit<IconLinkProps, "className">>;
 }
 
 export interface ProfileProps {
@@ -32,8 +28,8 @@ function Profile({ info }: ProfileProps) {
         last={
           <div className="h-[100%] flex flex-col justify-center gap-2">
             <h1 className="text-4xl mb-12">{info.name}</h1>
-            {info.contacts.map(({ iconUrl, link, text }) => (
-              <IconLink key={text} iconUrl={iconUrl} link={link} text={text} />
+            {info.contacts.map(({ icon, link, text }) => (
+              <IconLink key={text} icon={icon} link={link} text={text} />
             ))}
           </div>
         }
