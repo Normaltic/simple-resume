@@ -1,19 +1,20 @@
 import type { ProfilePayload } from "@/components/profile/Profile";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+
+import Github from "@/svgs/github.svg";
+import Envelope from "@/svgs/envelope.svg";
 
 const payload: ProfilePayload = {
   name: "김윤지 ( Yunji Kim )",
   profileImage: "/images/Profile.png",
   contacts: [
     {
-      icon: faGithub,
+      icon: Github,
       link: "https://github.com/Normaltic",
       text: "Normaltic"
     },
 
     {
-      icon: faEnvelope,
+      icon: Envelope,
       link: "mailto:normaltic@gmail.com",
       text: "normaltic@gmail.com"
     }
