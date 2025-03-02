@@ -4,16 +4,14 @@
 
 :root {
   --primary: #379ad3;
-  --foreground: #191919;
+  --foreground: #212529;
   --background: #ffffff;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: #dddddd;
-    --background: #191919;
-  }
-} */
+:root.dark {
+  --foreground: #dddddd;
+  --background: #212529;
+}
 
 html {
   background-color: var(--primary);
@@ -24,6 +22,12 @@ body {
   background-color: var(--background);
   font-weight: 300;
   line-height: 1.75;
+}
+
+.linear-transition-color {
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-property: color, background-color;
 }
 
 @media screen and (max-width: 768px) {

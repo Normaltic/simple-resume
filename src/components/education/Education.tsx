@@ -37,7 +37,7 @@ function Education({ educations }: EducationProps) {
                   <Header4>{name}</Header4>
                   {department && <Header4>{department}</Header4>}
                 </div>
-                <div className="text-gray-500 italic">
+                <div className="text-gray-400 italic">
                   <div>{displayPeriod(start, end)}</div>
                   {degree && <div>{degree}</div>}
                 </div>

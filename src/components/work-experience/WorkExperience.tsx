@@ -38,7 +38,7 @@ function WorkExperience({ careers }: WorkExperienceProps) {
       {careers.map(({ name, start, end, description, experiences }) => (
         <article className="[&:nth-last-child(n+2)]:mb-12" key={name}>
           <Header3 className="">{name}</Header3>
-          <i className="block text-xl mb-4 text-gray-500">
+          <i className="block text-xl mb-4 text-gray-400">
             {displayPeriod(start, end)} ({dateDiff(start, end ?? new Date())})
           </i>
           {description && <Paragraph className="mb-8">{description}</Paragraph>}
@@ -49,7 +49,7 @@ function WorkExperience({ careers }: WorkExperienceProps) {
               }
               key={`${position}-${start.toString()}`}
               first={
-                <div className="sticky top-4 text-gray-500 text-xl italic max-sm:flex max-sm:flex-col-reverse">
+                <div className="sticky top-4 text-gray-400 text-xl italic max-sm:flex max-sm:flex-col-reverse">
                   <div>{position}</div>
                   <div>{displayPeriod(start, end)}</div>
                 </div>

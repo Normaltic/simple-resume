@@ -20,7 +20,7 @@ function Profile({ info }: ProfileProps) {
         className="max-sm:flex-col max-sm:items-center"
         first={
           <img
-            className="bg-gray-500 max-w-[12rem]"
+            className="max-w-[12rem]"
             src={info.profileImage}
             alt="Profile Image"
           />
