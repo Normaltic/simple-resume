@@ -31,6 +31,10 @@ export default {
             transform: "rotate(180deg)"
           }
         }
+      },
+      animation: {
+        rise: "rise 0.6s forwards",
+        set: "set 0.6s forwards"
       }
     }
   },

@@ -32,20 +32,10 @@ function ThemeWidget({ className }: ThemeWidgetProps) {
       )}
       onClick={() => toggleTheme()}
     >
-      <div
-        className={mergeClassNames(
-          "absolute w-12 h-12 flex justify-center items-center",
-          "origin-[50%_100%] animate-[rise_0.2s_forwards] dark:animate-[set_0.2s_forwards]"
-        )}
-      >
+      <div className="absolute w-12 h-12 flex justify-center items-center origin-[50%_100%] animate-rise dark:animate-set">
         <Sun className="fill-yellow-400" />
       </div>
-      <div
-        className={mergeClassNames(
-          "absolute w-12 h-12 flex justify-center items-center",
-          "origin-[50%_100%] animate-[set_0.2s_forwards] dark:animate-[rise_0.2s_forwards]"
-        )}
-      >
+      <div className="absolute w-12 h-12 flex justify-center items-center origin-[50%_100%] animate-set dark:animate-rise">
         <Moon className="fill-yellow-400" />
       </div>
     </div>
