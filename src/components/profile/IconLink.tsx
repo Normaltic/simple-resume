@@ -10,7 +10,11 @@ export interface IconLinkProps {
 function IconLink({ className, icon: Icon, link, text }: IconLinkProps) {
   return (
     <div className={mergeClassNames("flex items-center gap-4", className)}>
-      <Icon width={16} height={16} />
+      <Icon
+        className="fill-foreground linear-transition-color"
+        width={16}
+        height={16}
+      />
       <a className="text-primary" target="_blank" href={link}>
         {text ?? link}
       </a>

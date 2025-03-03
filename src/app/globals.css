@@ -27,7 +27,7 @@ body {
 .linear-transition-color {
   transition-duration: 0.2s;
   transition-timing-function: linear;
-  transition-property: color, background-color;
+  transition-property: color, fill, background-color;
 }
 
 @media screen and (max-width: 768px) {
