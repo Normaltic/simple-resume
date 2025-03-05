@@ -6,7 +6,7 @@ const payload: EtcPayload[] = [
     descriptions: ["육군 병장 만기 전역 (14.08 ~ 16.05)"]
   },
   {
-    title: "자격중",
+    title: "자격증",
     descriptions: [
       "정보처리기사 (18.05 취득)",
       "TOPCIT 475점 (수준3, 18.05 응시)"
