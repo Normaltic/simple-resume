@@ -1,4 +1,5 @@
 import { mergeClassNames } from "@/utils/mergeClassNames";
+import Anchor from "@/components/common/Anchor";
 
 export interface IconLinkProps {
   className?: string;
@@ -15,9 +16,7 @@ function IconLink({ className, icon: Icon, link, text }: IconLinkProps) {
         width={16}
         height={16}
       />
-      <a className="text-primary" target="_blank" href={link}>
-        {text ?? link}
-      </a>
+      <Anchor>{text ?? link}</Anchor>
     </div>
   );
 }
