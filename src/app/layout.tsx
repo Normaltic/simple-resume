@@ -20,12 +20,12 @@ export default function RootLayout({
         <SyncThemeScript />
       </head>
       <body className={`${pretendard.className} linear-transition-color`}>
-        <header className="bg-primary h-6" />
+        <header className="bg-primary print:bg-transparent h-6" />
         <main className="max-w-4xl m-auto p-6">
           {children}
-          <ThemeWidget className="fixed bottom-8 right-8" />
+          <ThemeWidget className="fixed bottom-8 right-8 print:hidden" />
         </main>
-        <footer className="bg-primary h-6" />
+        <footer className="bg-primary print:bg-transparent h-6" />
       </body>
     </html>
   );

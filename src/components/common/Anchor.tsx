@@ -6,7 +6,7 @@ function Anchor({ className, children, ...props }: AnchorProps) {
   return (
     <a
       className={mergeClassNames(
-        "text-gray-500 border-b border-gray-400 dark:text-gray-400 linear-transition-color",
+        "text-gray-500 underline decoration-gray-400 underline-offset-4 linear-transition-color",
         className
       )}
       {...props}

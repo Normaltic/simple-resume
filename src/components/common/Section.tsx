@@ -10,7 +10,7 @@ function Section({ className, title, children }: SectionProps) {
   return (
     <section className={mergeClassNames("my-16", className)}>
       {title && (
-        <h2 className="text-3xl flex items-center mb-8 text-primary after:content-[' '] after:ml-6 after:border-t-[1px] after:border-gray-300 after:flex-1">
+        <h2 className="text-3xl flex items-center mb-8 text-primary after:content-[' '] after:ml-6 after:h-[1px] after:bg-gray-300 after:flex-1">
           {title}
         </h2>
       )}

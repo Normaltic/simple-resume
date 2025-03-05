@@ -45,11 +45,11 @@ function WorkExperience({ careers }: WorkExperienceProps) {
           {experiences.map(({ position, start, end, experience }) => (
             <Row
               className={
-                "[&:nth-last-child(n+2)]:mb-8 max-sm:flex-col max-sm:gap-4 max-sm:first:*:w-[initial]"
+                "[&:nth-last-child(n+2)]:mb-8 max-sm:flex-col max-lg:gap-4 max-sm:first:*:w-[initial]"
               }
               key={`${position}-${start.toString()}`}
               first={
-                <div className="sticky top-4 text-gray-400 text-xl italic max-sm:flex max-sm:flex-col-reverse">
+                <div className="sticky print:static top-4 text-gray-400 text-xl italic max-sm:flex max-sm:flex-col-reverse">
                   <div>{position}</div>
                   <div>{displayPeriod(start, end)}</div>
                 </div>
