@@ -53,9 +53,9 @@ const SKETCHSOFT_ENGINEER_2: PositionExpeirence = {
       value: "프로젝트 아키텍처의 문제 해결을 위한 점진적 리팩토링"
     },
     [
-      "높은 결합도 등의 구조적 문제 해결을 위해 프로젝트에 적합한 아키텍처를 지속적으로 검증",
-      "AR 구현 시 신규 구조 적용을 시작으로 다양한 시도를 하며 점진적으로 리팩토링",
-      "React, Zustand 도입으로 컴포넌트 기반 구조와 상태 관리를 적용"
+      "높은 의존성 등의 구조적 문제 해결을 위해 프로젝트에 적합한 아키텍처를 지속적으로 검증",
+      "AR 구현 시 신규 구조 적용을 시작으로 다양한 시도를 하며 점진적으로 리팩토링 진행",
+      "React, Zustand 도입으로 컴포넌트 기반 구조와 전역 상태 관리를 적용"
     ],
 
     { bold: true, value: "프로젝트의 모듈 시스템 정리" },
@@ -64,13 +64,13 @@ const SKETCHSOFT_ENGINEER_2: PositionExpeirence = {
     ],
     { bold: true, value: "서비스 공지사항 풀스택 개발" },
     [
-      "이미지 삽입을 위한 에디터 라이브러리 확장과 백오피스 공지사항 CRUD 구현을 통해 담당자의 작업 효율을 개선",
+      "이미지 삽입을 위해 에디터 라이브러리를 확장히고 백오피스 공지사항 CRUD 구현을 통해 담당자의 작업 효율을 개선",
       "이미지를 포함한 복수개의 공지사항 출력과 슬라이드 탐색을 통해 사용자에게 다양한 정보를 제공"
     ],
     { bold: true, value: "제스처 이벤트 모듈화 작업 진행" },
     [
-      "포인터 이벤트를 활용해 조건에 따라 펜과 손가락의 제스처를 구분하고 커스텀 이벤트로 정의하여 제스처 이벤트 시스템 구현",
-      "상세한 문서화와 직관적인 구조로 개발자가 쉽게 이해하고 사용할 수 있도록 모듈화"
+      "포인터 이벤트를 활용해 조건에 따라 펜과 손가락의 제스처를 구분하고 커스텀 이벤트로 정의하여 제스처 이벤트 모듈 구현",
+      "상세한 문서화 및 직관적인 구조로 개발자가 쉽게 이해하고 사용할 수 있도록 모듈화"
     ]
   ]
 };
@@ -143,7 +143,7 @@ const BASETRADE_DEVELOPER_1: PositionExpeirence = {
 
 const BASETRADE_DEVELOPER_2: PositionExpeirence = {
   title: "암호화폐 거래소",
-  techStack: ["react", "redux", "redux-saga", "sass", "styled-components"],
+  techStack: ["react", "redux", "redux-saga", "scss", "styled-components"],
   contents: [
     { bold: true, value: "레거시 코드 리팩토링 및 성능 최적화" },
     [
