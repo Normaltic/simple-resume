@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+
 import Section from "@/components/common/Section";
 import Header4 from "@/components/common/Header4";
 import UnorderedList, {
@@ -19,7 +21,7 @@ function OtherExperience({ experiences }: OtherExperienceProps) {
   return (
     <Section title="Other Experience">
       {experiences.map(({ title, link, descriptions }) => (
-        <>
+        <Fragment key={title}>
           <Header4>
             {link ? (
               <Anchor target="_blank" href={link}>
@@ -30,7 +32,7 @@ function OtherExperience({ experiences }: OtherExperienceProps) {
             )}
           </Header4>
           <UnorderedList items={descriptions} />
-        </>
+        </Fragment>
       ))}
     </Section>
   );

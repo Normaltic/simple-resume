@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+
 import Section from "@/components/common/Section";
 import Header4 from "@/components/common/Header4";
 import UnorderedList, {
@@ -17,13 +19,13 @@ function Skill({ list }: SkillProps) {
   return (
     <Section title="Skill">
       {list.map(({ category, list }) => (
-        <>
+        <Fragment key={category}>
           <Header4 className="mb-2">{category}</Header4>
           <UnorderedList
             className="[&:nth-last-child(n+2)]:mb-4"
             items={list}
           />
-        </>
+        </Fragment>
       ))}
     </Section>
   );

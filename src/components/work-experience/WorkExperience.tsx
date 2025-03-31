@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+
 import Section from "@/components/common/Section";
 import Header3 from "@/components/common/Header3";
 import Header4 from "@/components/common/Header4";
@@ -6,7 +8,9 @@ import Row from "@/components/common/Row";
 import UnorderedList, {
   UnorderedListProps
 } from "@/components/common/UnorderedList";
+
 import { dateDiff, displayPeriod } from "@/utils/date";
+
 import TechBadge from "./TechBadge";
 
 interface PositionExpeirence {
@@ -57,7 +61,7 @@ function WorkExperience({ careers }: WorkExperienceProps) {
               last={
                 <>
                   {experience.map(({ title, techStack, contents }) => (
-                    <>
+                    <Fragment key={title}>
                       <Header4 className="[&:nth-child(n+2)]:mt-8">
                         {title}
                       </Header4>
@@ -71,7 +75,7 @@ function WorkExperience({ careers }: WorkExperienceProps) {
                         </div>
                       )}
                       <UnorderedList items={contents} />
-                    </>
+                    </Fragment>
                   ))}
                 </>
               }

@@ -1,11 +1,15 @@
+import { Fragment } from "react";
+
 import Section from "@/components/common/Section";
 import Row from "@/components/common/Row";
 import Header5 from "@/components/common/Header5";
 import UnorderedList, {
   UnorderedListProps
 } from "@/components/common/UnorderedList";
+import Header4 from "@/components/common/Header4";
+
 import { displayPeriod } from "@/utils/date";
-import Header4 from "../common/Header4";
+
 
 export interface EducationPayload {
   name: string;
@@ -44,10 +48,10 @@ function Education({ educations }: EducationProps) {
               </>
             }
             last={activities.map(({ title, descriptions }) => (
-              <>
+              <Fragment key={title}>
                 <Header5 className="[&:nth-child(n+2)]:mt-4">{title}</Header5>
                 {descriptions && <UnorderedList items={descriptions} />}
-              </>
+              </Fragment>
             ))}
           />
         )
