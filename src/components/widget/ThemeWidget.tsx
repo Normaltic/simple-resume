@@ -1,10 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
-
 import useToggleTheme from "@/hooks/useToggleTheme";
 import { mergeClassNames } from "@/utils/mergeClassNames";
-import { isSystemDarkTheme } from "@/utils/theme";
 
 import Sun from "@/svgs/sun.svg";
 import Moon from "@/svgs/moon.svg";
@@ -14,15 +11,7 @@ export interface ThemeWidgetProps {
 }
 
 function ThemeWidget({ className }: ThemeWidgetProps) {
-  const [, toggleTheme] = useToggleTheme();
-
-  useEffect(() => {
-    if (
-      localStorage.theme ? localStorage.theme === "dark" : isSystemDarkTheme()
-    ) {
-      toggleTheme("dark");
-    }
-  }, [toggleTheme]);
+  const toggleTheme = useToggleTheme();
 
   return (
     <div
