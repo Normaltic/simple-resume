@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from 'tailwindcss/plugin';
 
 export default {
   darkMode: "class",
@@ -38,5 +39,15 @@ export default {
       }
     }
   },
-  plugins: []
+  plugins: [
+    plugin(({addUtilities}) => {
+      addUtilities({
+        '.linear-transition-colors': {
+          transitionDuration: '0.2s',
+          transitionTimingFunction: 'linear',
+          transitionProperty: 'color, fill, background-color',
+        }
+      })
+    })
+  ]
 } satisfies Config;

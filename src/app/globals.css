@@ -34,12 +34,6 @@ h6 {
   font-weight: 500;
 }
 
-.linear-transition-color {
-  transition-duration: 0.2s;
-  transition-timing-function: linear;
-  transition-property: color, fill, background-color;
-}
-
 @media screen and (max-width: 768px) {
   html {
     font-size: 15px;
