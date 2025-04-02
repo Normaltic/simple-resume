@@ -16,7 +16,7 @@ function IconLink({ className, icon: Icon, link, text }: IconLinkProps) {
         width={16}
         height={16}
       />
-      <Anchor href={link}>{text ?? link}</Anchor>
+      <Anchor target="_blank" href={link}>{text ?? link}</Anchor>
     </div>
   );
 }

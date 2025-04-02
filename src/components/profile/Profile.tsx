@@ -27,9 +27,9 @@ function Profile({ info }: ProfileProps) {
         }
         last={
           <div className="h-[100%] flex flex-col justify-center gap-2">
-            <h1 className="text-4xl mb-12">{info.name}</h1>
-            {info.contacts.map(({ icon, link, text }) => (
-              <IconLink key={text} icon={icon} link={link} text={text} />
+            <h1 className="text-4xl mt-6">{info.name}</h1>
+            {info.contacts.map(({ icon, link, text }, index) => (
+              <IconLink className={index === 0 ? 'mt-auto' : ''} key={text} icon={icon} link={link} text={text} />
             ))}
           </div>
         }
