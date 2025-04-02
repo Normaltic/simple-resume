@@ -2,6 +2,7 @@ import type { ProfilePayload } from "@/components/profile/Profile";
 
 import Github from "@/svgs/github.svg";
 import Envelope from "@/svgs/envelope.svg";
+import RSS from '@/svgs/rss.svg';
 
 const payload: ProfilePayload = {
   name: "김윤지 ( Yunji Kim )",
@@ -17,6 +18,11 @@ const payload: ProfilePayload = {
       icon: Envelope,
       link: "mailto:normaltic@gmail.com",
       text: "normaltic@gmail.com"
+    },
+    {
+      icon: RSS,
+      link: "https://blog.yunji.kim",
+      text: "blog.yunji.kim"
     }
   ]
 };
