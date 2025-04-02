@@ -22,7 +22,7 @@ const payload: ProfilePayload = {
     {
       icon: RSS,
       link: "https://blog.yunji.kim",
-      text: "blog.yunji.kim"
+      text: "Yunji's Blog"
     }
   ]
 };
