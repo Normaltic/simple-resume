@@ -7,22 +7,6 @@ type Experience = DiscoveredArray<CareerPayload["experiences"]>;
 type PositionExpeirence = DiscoveredArray<Experience["experience"]>;
 
 const SKETCHSOFT_ENGINEER_1: PositionExpeirence = {
-  title: "스크럼 마스터 수행",
-  contents: [
-    { bold: true, value: "제품의 마일스톤 기반 백로그 구성 및 스프린트 진행" },
-    [
-      "가시적인 일정과 정리된 작업을 통해 명확한 목표를 제공하여 팀의 집중도를 향상",
-      "작업 단위를 세분화하고 리소스를 관리하여 작업 간 충돌과 병목을 최소화"
-    ],
-    { bold: true, value: "다른 팀과의 소통 및 협업 진행" },
-    [
-      "문서화된 기록을 통해 다른 팀과의 소통을 개선하여 원활한 협업을 진행",
-      "작업 결과와 배포 전 모습을 지속적으로 확인할 수 있게 하여 제품의 상태를 명확히 파악할 수 있도록 지원"
-    ]
-  ]
-};
-
-const SKETCHSOFT_ENGINEER_2: PositionExpeirence = {
   title: "3D Sketchbook Feather",
   techStack: [
     "react",
@@ -37,7 +21,7 @@ const SKETCHSOFT_ENGINEER_2: PositionExpeirence = {
       "상태를 판단하는 로직을 통합하고 prefetch를 통해 목표 페이지의 리소스를 사전 로딩",
       "화면 전환을 최소화하여 복원 과정에 대한 UX를 개선하고 복원 시간을 약 30% 단축"
     ],
-    { bold: true, value: "드로잉 데이터 저장 방식 마이그레이션" },
+    { bold: true, value: "그림 데이터 저장 방식 마이그레이션" },
     [
       "IndexedDB를 활용한 로컬 우선 저장 방식 적용으로 일시적인 오프라인일 때에도 작업 지원 및 데이터 유실을 방지",
       "데이터 업로드 시 델타 압축을 적용하여 벡터 데이터의 크기를 약 60% 감소",
@@ -75,6 +59,22 @@ const SKETCHSOFT_ENGINEER_2: PositionExpeirence = {
   ]
 };
 
+const SKETCHSOFT_ENGINEER_2: PositionExpeirence = {
+  title: "스크럼 프로세스 도입 및 진행",
+  contents: [
+    { bold: true, value: "제품의 마일스톤 기반 백로그 구성 및 스프린트 진행" },
+    [
+      "가시적인 일정과 정리된 작업을 통해 명확한 목표를 제공하여 팀의 집중도를 향상",
+      "작업 단위를 세분화하고 리소스를 관리하여 작업 간 충돌과 병목을 최소화"
+    ],
+    { bold: true, value: "다른 팀과의 소통 및 협업 진행" },
+    [
+      "문서화된 기록을 통해 다른 팀과의 소통을 개선하여 원활한 협업을 진행",
+      "작업 결과와 배포 전 모습을 지속적으로 확인할 수 있게 하여 제품의 상태를 명확히 파악할 수 있도록 지원"
+    ]
+  ]
+};
+
 const SKETCHSOFT_EXPERIENCES: Experience = {
   position: "Engineer",
   start: new Date("2021-10"),
@@ -87,7 +87,7 @@ const SKETCHSOFT_PAYLOAD: CareerPayload = {
   start: new Date("2021-10"),
   end: new Date("2024-06"),
   description:
-    "‘어떤 상상도 바로 그릴 수 있게’를 추구하며 3차원 스케치북 서비스 ‘Feather’를 개발하는 스타트업입니다. 엔지니어로 합류하여 주로 서비스의 프론트엔드를 개발하였고, 상황에 따라 백엔드 개발도 진행하였습니다. 팀 내부에서 일정 관리에 대한 필요성이 생겨, 스크럼을 도입하고 스프린트를 진행하며 제품 개발에 대한 프로세스를 정립하였습니다.",
+    "‘어떤 상상도 바로 그릴 수 있게’를 추구하며 3차원 스케치북 서비스 ‘Feather’를 개발하는 스타트업입니다. 엔지니어로 합류해 서비스의 프론트엔드를 담당하며 신규 기능을 구현하고 서비스의 사용자 경험을 개선해 나갔습니다. 또한 아키텍처 개선, 모듈화 등 DX를 고려한 작업이나, 팀의 목표를 이루기 위해 백엔드 개발을 진행하기도 했습니다. 팀의 협업 방식에 대한 개선이 필요하게 되어, 스크럼을 도입하고 스프린트를 진행하며 제품 개발에 대한 프로세스를 정리하였습니다.",
   experiences: [SKETCHSOFT_EXPERIENCES]
 };
 
@@ -161,17 +161,17 @@ const BASETRADE_DEVELOPER_2: PositionExpeirence = {
 };
 
 const BASETRADE_EXPERIENCES_1: Experience = {
-  position: "Frontend team lead",
-  start: new Date("2020-08"),
-  end: new Date("2021-10"),
-  experience: [BASETRADE_TEAM_LEAD]
-};
-
-const BASETRADE_EXPERIENCES_2: Experience = {
   position: "Frontend developer",
   start: new Date("2019-10"),
   end: new Date("2021-10"),
   experience: [BASETRADE_DEVELOPER_1, BASETRADE_DEVELOPER_2]
+};
+
+const BASETRADE_EXPERIENCES_2: Experience = {
+  position: "Frontend team lead",
+  start: new Date("2020-08"),
+  end: new Date("2021-10"),
+  experience: [BASETRADE_TEAM_LEAD]
 };
 
 const BASETRADE_PAYLOAD: CareerPayload = {
@@ -179,7 +179,7 @@ const BASETRADE_PAYLOAD: CareerPayload = {
   start: new Date("2019-10"),
   end: new Date("2021-10"),
   description:
-    "블록체인 관련 기술을 보유한 스타트업으로, 프론트엔드 개발자로 합류하였습니다. 초기에는 사내에서 개발 중이던 거래소의 신규 기능 개발과 유지보수를 진행하였습니다. 이후 회사의 방향성에 의해 투자 조합 관리 플랫폼을 개발하였습니다. 합류하고 얼마 지나지 않아 프론트엔드 개발자가 혼자가 되었으나, 팀원이 생기며 작은 규모의 팀 리드를 맡게 되었습니다.",
+    "블록체인 관련 기술을 보유한 스타트업으로, 프론트엔드 개발자로 합류하였습니다. 초기에는 사내에서 개발 중이던 거래소의 기능 개발과 함께 기술 부채를 해결하고 성능을 개선하는 작업을 진행했습니다. 이후 회사의 방향성에 의해 투자 조합 관리 플랫폼을 처음부터 개발하여 서비스를 만들어 나갔습니다. 합류하고 얼마 지나지 않아 프론트엔드 개발을 혼자 진행하였으나, 팀원이 생기기 시작하며 작은 규모의 팀 리드를 맡게 되어 개발 문화를 조성해 나갔습니다.",
   experiences: [BASETRADE_EXPERIENCES_1, BASETRADE_EXPERIENCES_2]
 };
 
