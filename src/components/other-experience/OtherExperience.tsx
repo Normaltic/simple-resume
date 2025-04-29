@@ -22,7 +22,7 @@ function OtherExperience({ experiences }: OtherExperienceProps) {
     <Section title="Other Experience">
       {experiences.map(({ title, link, descriptions }) => (
         <Fragment key={title}>
-          <Header4>
+          <Header4 className="mb-2">
             {link ? (
               <Anchor target="_blank" href={link}>
                 {title}
