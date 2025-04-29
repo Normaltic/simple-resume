@@ -10,6 +10,7 @@ import UnorderedList, {
 } from "@/components/common/UnorderedList";
 
 import { dateDiff, displayPeriod } from "@/utils/date";
+import { mergeClassNames } from "@/utils/mergeClassNames";
 
 import TechBadge from "./TechBadge";
 
@@ -38,7 +39,7 @@ export interface WorkExperienceProps {
 
 function WorkExperience({ careers }: WorkExperienceProps) {
   return (
-    <Section title="Work Experience">
+    <Section title="Work Experience" className="break-before-page">
       {careers.map(({ name, start, end, description, experiences }) => (
         <article className="[&:nth-last-child(n+2)]:mb-12" key={name}>
           <Header3 className="">{name}</Header3>
@@ -62,11 +63,16 @@ function WorkExperience({ careers }: WorkExperienceProps) {
                 <>
                   {experience.map(({ title, techStack, contents }) => (
                     <Fragment key={title}>
-                      <Header4 className="[&:nth-child(n+2)]:mt-8">
+                      <Header4
+                        className={mergeClassNames(
+                          "[&:nth-child(n+2)]:mt-8",
+                          techStack === undefined ? "mb-2" : ""
+                        )}
+                      >
                         {title}
                       </Header4>
                       {techStack && (
-                        <div>
+                        <div className="mb-2">
                           {techStack.map((tech) => (
                             <TechBadge className="mr-1" key={tech}>
                               {tech}

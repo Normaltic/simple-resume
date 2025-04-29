@@ -10,7 +10,6 @@ import Header4 from "@/components/common/Header4";
 
 import { displayPeriod } from "@/utils/date";
 
-
 export interface EducationPayload {
   name: string;
   department?: string;

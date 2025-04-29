@@ -20,7 +20,7 @@ function Etc({ etcs }: EtcProps) {
       {etcs.map(({ title, descriptions }) => (
         <Fragment key={title}>
           <Header5>{title}</Header5>
-          <UnorderedList className="mb-6" items={descriptions} />
+          <UnorderedList className="mb-4" items={descriptions} />
         </Fragment>
       ))}
     </Section>
