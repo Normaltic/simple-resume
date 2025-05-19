@@ -119,7 +119,7 @@ const BASETRADE_DEVELOPER_1: PositionExpeirence = {
     ],
     {
       bold: true,
-      value: "SPA 환경에서의 버전 불일치 문제를 위한 사용자 안내 로직 구현"
+      value: "SPA 환경에서의 버전 불일치 문제 해결을 위한 사용자 안내 로직 구현"
     },
     [
       "배포 시 기존 접속자에게 신규 버전을 제공하지 못하는 문제에 대한 해결 방안 설계",
@@ -159,7 +159,7 @@ const BASETRADE_DEVELOPER_2: PositionExpeirence = {
 };
 
 const BASETRADE_TEAM_LEAD: PositionExpeirence = {
-  title: "프론트엔드 팀 리드 수행",
+  title: "프론트엔드 개발 문화 조성 및 팀 리드 수행",
   contents: [
     { bold: true, value: "프론트엔드 개발 문화 형성" },
     [
