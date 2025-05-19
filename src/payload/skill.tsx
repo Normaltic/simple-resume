@@ -3,15 +3,18 @@ import type { SkillPayload } from "@/components/skill/Skill";
 const payload: SkillPayload[] = [
   {
     category: "Frontend",
-    list: ["React, Redux, Zustand, (Next.js)", "SCSS, (Tailwind.css, emotion)"]
+    list: [
+      "React, Redux, zustand, (Next.js, Three.js)",
+      "SCSS, (Tailwind.CSS, emotion)"
+    ]
   },
   {
     category: "Backend",
-    list: ["Express.js, (MongoDB)"]
+    list: ["Express, (MongoDB)"]
   },
   {
     category: "Build & Deploy",
-    list: ["Webpack, Rollup, AWS Amplify, EC2, (esbuild)"]
+    list: ["webpack, Rollup, AWS Amplify, EC2, (esbuild)"]
   }
 ];
 

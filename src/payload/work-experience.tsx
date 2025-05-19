@@ -9,10 +9,10 @@ type PositionExpeirence = DiscoveredArray<Experience["experience"]>;
 const SKETCHSOFT_ENGINEER_1: PositionExpeirence = {
   title: "3D Sketchbook Feather",
   techStack: [
-    "react",
-    "typescript",
+    "React",
+    "Typescript",
     "zustand",
-    "three.js",
+    "Three.js",
     "styled-components"
   ],
   contents: [
@@ -105,7 +105,7 @@ const SKETCHSOFT_PAYLOAD: CareerPayload = {
 
 const BASETRADE_DEVELOPER_1: PositionExpeirence = {
   title: "투자 조합 관리 플랫폼 RedFi",
-  techStack: ["react", "typescript", "recoil", "styled-components"],
+  techStack: ["React", "Typescript", "Recoil", "styled-components"],
   contents: [
     {
       bold: true,
@@ -137,7 +137,7 @@ const BASETRADE_DEVELOPER_1: PositionExpeirence = {
 
 const BASETRADE_DEVELOPER_2: PositionExpeirence = {
   title: "암호화폐 거래소",
-  techStack: ["react", "redux", "redux-saga", "scss", "styled-components"],
+  techStack: ["React", "Redux", "redux-saga", "SCSS", "styled-components"],
   contents: [
     {
       bold: true,
